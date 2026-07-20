@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fossa.com/docs/api/authentication
+docs: https://docs.fossa.com/docs/api/authentication
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  transport: https-only
+schemes:
+- name: apiToken
+  type: http
+  scheme: bearer
+  in: header
+  header: Authorization
+  format: 'Authorization: Bearer [example key]'
+  sources: [https://docs.fossa.com/docs/api/authentication]
+  description: >-
+    Every call to the FOSSA API authenticates with an API token passed as a
+    Bearer token in the Authorization header, over HTTPS only.
+credential_forms:
+- name: personal-api-token
+  description: Individual user credential tied to that user's permissions.
+- name: service-account
+  description: Non-human credential for automation and integrations.
+- name: oidc
+  description: >-
+    Short-lived JWT exchanged from a CI/CD platform's OIDC identity for a FOSSA
+    token — no long-lived secret stored in the pipeline.
+access_levels:
+- name: push-only
+  description: Can send/push analysis data to FOSSA but not read.
+- name: full
+  description: Read/write access equivalent to the account's permissions.
+token_management:
+- rotation_docs: https://docs.fossa.com/docs/api/examples/rotating-access-tokens
+notes:
+- The FOSSA CLI reads its token from the FOSSA_API_KEY environment variable.
+- No OAuth2 authorization/token flow or scopes are published for the REST API; access is API-token based, so no scopes/ artifact is emitted.

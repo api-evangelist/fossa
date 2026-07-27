@@ -1,8 +1,15 @@
 aid: fossa
 name: Fossa
-description: 'Fossa is a company surfaced as a portfolio company of bain-capital-ventures, norwest-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. Sector: security. This profile is
-  a lead awaiting the enrichment pipeline.'
+description: >-
+  FOSSA is a software supply chain security and open source management platform
+  that scans codebases, containers, and binaries to detect open source
+  dependencies, then enforces open source license compliance, vulnerability
+  management, and SBOM (CycloneDX/SPDX) obligations across the software
+  development lifecycle. FOSSA exposes a REST API at app.fossa.com/api plus the
+  language-agnostic FOSSA CLI, integrating with 20+ build systems and CI/CD to
+  surface licensing, security, and quality issues, generate attribution and
+  audit reports, and gate pull requests on policy violations. Backed by Bain
+  Capital Ventures and Norwest Venture Partners.
 url: https://raw.githubusercontent.com/api-evangelist/fossa/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,18 +18,123 @@ x-backed-by:
 - norwest-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://fossa.com/favicon.png
 tags:
 - Company
 - Security
-apis: []
+- Software Supply Chain
+- Open Source
+- License Compliance
+- Vulnerability Management
+- SBOM
+- Software Composition Analysis
+- DevSecOps
+apis:
+- name: FOSSA REST API
+  description: >-
+    The FOSSA REST API lets you build integrations and automate open source
+    management workflows — manage projects, revisions, issues, users and teams,
+    release groups, and reports; initiate binary scans; download attribution
+    reports; and query the vulnerability database by CPE. Authenticates with an
+    API token in the Authorization Bearer header over HTTPS.
+  humanURL: https://docs.fossa.com/docs/api
+  baseURL: https://app.fossa.com/api
+  properties:
+  - type: APIReference
+    url: https://docs.fossa.com/docs/api/reference
+  - type: Authentication
+    url: authentication/fossa-authentication.yml
+  - type: ErrorCatalog
+    url: errors/fossa-problem-types.yml
+  - type: Webhooks
+    url: asyncapi/fossa-webhooks.yml
+  - type: DataModel
+    url: data-model/fossa-data-model.yml
+  - type: Conventions
+    url: conventions/fossa-conventions.yml
+  - type: MCPServer
+    url: mcp/fossa-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/fossa-trust-center.yml
 - type: Website
   url: https://fossa.com/
+- type: DeveloperPortal
+  url: https://docs.fossa.com/
+- type: Documentation
+  url: https://docs.fossa.com/docs/get-started
+- type: APIReference
+  url: https://docs.fossa.com/docs/api/reference
+- type: GettingStarted
+  url: https://docs.fossa.com/docs/get-started/your-first-scan
+- type: Support
+  url: https://support.fossa.com/
+- type: Blog
+  url: https://fossa.com/blog
+- type: GitHubOrganization
+  url: https://github.com/fossas
+- type: Pricing
+  url: https://fossa.com/pricing
+- type: SignUp
+  url: https://app.fossa.com/account/register
+- type: TermsOfService
+  url: https://fossa.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://fossa.com/privacy-policy
+- type: StatusPage
+  url: https://status.fossa.com
+- type: Compliance
+  url: https://fossa.com/trust
+- type: Authentication
+  url: authentication/fossa-authentication.yml
+- type: LLMsTxt
+  url: llms/fossa-llms.txt
+- type: Packages
+  url: packages/fossa-packages.yml
+- type: SDKs
+  url: packages/fossa-packages.yml
+- type: CLI
+  url: cli/fossa-cli.yml
+- type: ErrorCatalog
+  url: errors/fossa-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/fossa-lifecycle.yml
+- type: ChangeLog
+  url: changelog/fossa-changelog.yml
+- type: Conventions
+  url: conventions/fossa-conventions.yml
+- type: Conformance
+  url: conformance/fossa-conformance.yml
+- type: DataModel
+  url: data-model/fossa-data-model.yml
+- type: Webhooks
+  url: asyncapi/fossa-webhooks.yml
+- type: MCPServer
+  url: mcp/fossa-mcp.yml
+- type: DomainSecurity
+  url: security/fossa-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

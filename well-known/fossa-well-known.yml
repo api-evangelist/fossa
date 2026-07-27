@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+note: >-
+  Probed the /.well-known/ discovery surface on FOSSA's public hosts. No
+  discovery document (security.txt, openid-configuration, oauth-authorization-
+  server, api-catalog, ai-plugin.json) returned a public 200 — app.fossa.com
+  redirects (302) these paths to login, and fossa.com returns 404. Recorded as a
+  negative result; no WellKnown/APICatalog pointer is emitted (nothing to point
+  at). Note: fossa.com's CAA record does publish an iodef security contact
+  (mailto:security@fossa.com), captured in security/fossa-domain-security.yml.
+hosts:
+- host: https://app.fossa.com
+  documents:
+  - {path: /.well-known/security.txt, status: 302, note: redirects to /auth/login}
+  - {path: /.well-known/openid-configuration, status: 302}
+  - {path: /.well-known/oauth-authorization-server, status: 302}
+  - {path: /.well-known/api-catalog, status: 302}
+- host: https://fossa.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+- host: https://docs.fossa.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}

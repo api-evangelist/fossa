@@ -1,0 +1,62 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fossa.com/docs/cli
+name: FOSSA CLI
+binary: fossa
+repo: https://github.com/fossas/fossa-cli
+docs: https://docs.fossa.com/docs/cli
+latest_version: v3.17.13
+language: haskell
+description: >-
+  Language-agnostic dependency analysis CLI. Discovers build targets, resolves
+  dependency graphs, and uploads analysis results to FOSSA for license and
+  vulnerability scanning across 20+ build systems and container images.
+install:
+- method: script
+  command: 'curl -H ''Cache-Control: no-cache'' https://raw.githubusercontent.com/fossas/fossa-cli/master/install-latest.sh | bash'
+- method: script-windows
+  command: "Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/fossas/fossa-cli/master/install-latest.ps1'))"
+- method: homebrew
+  command: brew install fossa
+- method: github-releases
+  command: https://github.com/fossas/fossa-cli/releases
+config:
+  auth_env: FOSSA_API_KEY
+  files:
+  - .fossa.yml
+  - fossa-deps.yml
+commands:
+- name: analyze
+  description: Discover build targets, resolve dependency graphs, and upload analysis results to FOSSA.
+- name: test
+  description: Fail CI when the latest scan has license or security policy violations.
+- name: container
+  description: Analyze and test container images for license and vulnerability policy violations.
+- name: sbom
+  description: Upload SPDX or CycloneDX SBOMs to FOSSA and run policy tests against them.
+- name: report
+  description: Download compliance or attribution reports for the latest project revision.
+- name: project
+  description: Create, view, and manage FOSSA projects from the command line.
+  subcommands:
+  - project edit
+- name: release-group
+  description: Manage FOSSA release groups and their member projects.
+  subcommands:
+  - release-group create
+  - release-group delete
+  - release-group add-projects
+  - release-group create-release
+  - release-group delete-release
+- name: init
+  description: Generate starter fossa-deps and .fossa.yml example files in the working directory.
+- name: list-targets
+  description: List analysis targets the CLI would run in a directory without uploading results.
+experimental:
+- experimental-link-user-defined-dependency-binary
+key_flows:
+- name: analyze-and-test
+  steps:
+  - fossa analyze
+  - fossa test
+  description: Configure your API key, run your first analyze and test cycle to gate CI on policy.

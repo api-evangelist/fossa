@@ -1,0 +1,46 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: https://docs.fossa.com/docs/api
+note: >-
+  No official hosted FOSSA MCP server was found. This is a CANDIDATE tool list
+  derived from the documented FOSSA REST API capability surface (docs.fossa.com
+  API examples + endpoint reference), not from a published OpenAPI spec. Each
+  tool maps to a documented API workflow; signatures require confirmation
+  against the live endpoint reference before implementation.
+server:
+  name: fossa
+  transport: http
+  auth: bearer
+  base_url: https://app.fossa.com/api
+tools:
+- name: list_organizations
+  description: List organizations the token can access.
+  source: https://docs.fossa.com/docs/api/authentication
+- name: list_issues
+  description: Query, filter, and manage licensing, security, and quality issues.
+  source: https://docs.fossa.com/docs/api/examples/managing-issues
+- name: bulk_ignore_issues
+  description: Bulk-ignore issues and manage auto-ignore rules.
+  source: https://docs.fossa.com/docs/api/examples/managing-issues
+- name: get_latest_revision
+  description: Retrieve the latest revision for each branch of a project.
+  source: https://docs.fossa.com/docs/api/examples/retrieving-latest-revision
+- name: manage_users_and_teams
+  description: Create users, manage team membership, and query team projects and release groups.
+  source: https://docs.fossa.com/docs/api/examples/managing-users-and-teams
+- name: initiate_binary_scan
+  description: Upload a binary or archive and start a decomposition scan, then poll for completion.
+  source: https://docs.fossa.com/docs/api/examples/initiating-a-binary-scan
+- name: generate_report
+  description: Trigger org-wide audit / due-diligence reports and global issue CSV exports.
+  source: https://docs.fossa.com/docs/api/examples/generating-reports
+- name: download_attribution_report
+  description: Download project attribution (licensing) reports in TXT, HTML, Markdown, PDF, or CSV.
+  source: https://docs.fossa.com/docs/api/examples/downloading-attribution-reports
+- name: modify_release_group
+  description: Add projects to a release group and update its member projects.
+  source: https://docs.fossa.com/docs/api/examples/modifying-release-groups
+- name: cpe_lookup
+  description: Query the vulnerability database for security metadata and CVEs by CPE string.
+  source: https://docs.fossa.com/docs/api/cpe-lookup

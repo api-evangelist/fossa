@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/fossas/fossa-cli/releases
+docs: https://github.com/fossas/fossa-cli/releases
+scheme: semver
+subject: FOSSA CLI
+current_version: v3.17.13
+note: >-
+  FOSSA publishes a dated, versioned changelog through the FOSSA CLI GitHub
+  Releases (Release notes from fossa-cli). The REST API itself is unversioned and
+  has no separate dated changelog. Recent CLI release window below.
+entries:
+- version: v3.17.13
+  date: '2026-07-01'
+- version: v3.17.12
+  date: '2026-06-16'
+- version: v3.17.11
+  date: '2026-05-29'
+- version: v3.17.10
+  date: '2026-05-20'
+- version: v3.17.8
+  date: '2026-05-18'
+- version: v3.17.7
+  date: '2026-05-13'
+- version: v3.17.6
+  date: '2026-05-06'
+- version: v3.17.5
+  date: '2026-05-05'
+- version: v3.17.4
+  date: '2026-04-29'

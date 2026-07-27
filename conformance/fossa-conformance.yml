@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fossa.com/docs/sbom
+note: >-
+  Standards conformance asserted from FOSSA's published documentation and trust
+  page. FOSSA's core product is software supply chain compliance, so SBOM format
+  and OIDC conformance are first-class and documented.
+standards:
+- id: cyclonedx
+  conforms: true
+  evidence: >-
+    FOSSA imports and exports CycloneDX SBOMs and runs license/security policy
+    checks against them (SBOM Import, SBOM reports, fossa sbom).
+  docs: https://docs.fossa.com/docs/sbom/importing-sboms
+- id: spdx
+  conforms: true
+  evidence: FOSSA imports and exports SPDX SBOMs (SBOM Import, attribution/SBOM reports).
+  docs: https://docs.fossa.com/docs/sbom/importing-sboms
+- id: oidc
+  conforms: true
+  evidence: >-
+    API supports OIDC — short-lived JWT exchange from CI/CD platforms for FOSSA
+    API tokens.
+  docs: https://docs.fossa.com/docs/api/authentication
+- id: cpe
+  conforms: true
+  evidence: CPE Lookup API queries the vulnerability database by CPE string.
+  docs: https://docs.fossa.com/docs/api/cpe-lookup
+- id: soc2
+  conforms: true
+  evidence: FOSSA trust page states SOC 2 compliance.
+  docs: https://fossa.com/trust
+- id: oauth2
+  conforms: false
+  evidence: API uses bearer API tokens; no OAuth2 authorization/token flow published.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: API errors are documented as HTTP status classes, not application/problem+json.

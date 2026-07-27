@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fossa.com/docs/api/errors
+docs: https://docs.fossa.com/docs/api/errors
+format: http-status-classes
+note: >-
+  FOSSA's public API error reference documents broad HTTP status classes rather
+  than a per-code registry or RFC 9457 problem+json envelope. Codes below are the
+  documented classes; the docs direct unexpected errors to support@fossa.com with
+  the endpoint, request, and response.
+rfc9457: false
+error_contact: support@fossa.com
+problems:
+- class: 2xx
+  meaning: Success — the request succeeded.
+- class: 4xx
+  meaning: >-
+    Client error — something about the request was wrong (for example a missing
+    API token or an omitted required parameter). Fix the request and retry.
+  remediation: Check authentication (Authorization Bearer token) and required parameters.
+- class: 5xx
+  meaning: Server error — an error occurred on FOSSA's servers.
+  remediation: Retry later; contact support@fossa.com if it persists.

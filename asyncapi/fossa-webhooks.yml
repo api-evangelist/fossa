@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fossa.com/docs/api/webhook-notifications
+type: Webhooks
+docs: https://docs.fossa.com/docs/api/webhook-notifications
+note: >-
+  FOSSA publishes an inbound webhook trigger surface (not an AsyncAPI event
+  stream). External systems (CI pipelines, package registries) POST to a
+  project-specific hook URL to trigger a FOSSA re-analysis of that project. No
+  AsyncAPI document is published, so no spec is captured — only the webhook
+  catalog below.
+direction: inbound
+hooks:
+- name: re-analyze-project
+  method: POST
+  url_pattern: https://app.fossa.com/hooks/webhook/{project-locator}
+  trigger: >-
+    An external system sends a POST to trigger re-analysis of the identified
+    project (by its FOSSA locator).
+  applies_to: VCS-managed projects only (fully provided / non-VCS projects are excluded)
+  failure_behavior: >-
+    If processing fails, FOSSA automatically disables the hook and records the
+    error.
+scheduled_reanalysis:
+  documented: true
+  note: Projects can also be re-analyzed on a schedule (Automatic Updates).
+  docs: https://docs.fossa.com/docs/project-setup/automatic-updates

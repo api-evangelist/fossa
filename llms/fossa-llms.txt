@@ -1,0 +1,284 @@
+<!-- generated: '2026-07-19' method: searched source: https://docs.fossa.com/llms.txt -->
+# FOSSA Documentation
+
+> Documentation for FOSSA, the platform for open source license compliance, vulnerability management, SBOMs, and dependency health.
+
+## Get Started
+
+- [Get Started](https://docs.fossa.com/docs/get-started.md): New to FOSSA? Import your first project, run a scan, and see results in minutes.
+- [Your First Scan](https://docs.fossa.com/docs/get-started/your-first-scan.md): Create an account, import your first project, read the results, and automate future scans.
+- [CLI vs Quick Import](https://docs.fossa.com/docs/get-started/cli-vs-quick-import.md): Choose between Quick Import and the FOSSA CLI based on your build environment and accuracy needs.
+
+## Project Setup
+
+- [Project Setup](https://docs.fossa.com/docs/project-setup.md): Get your code into FOSSA — import projects from source hosts, the CLI, or CI, then configure how they're scanned and organized.
+- [CLI](https://docs.fossa.com/docs/project-setup/cli.md): Analyze your code locally with the FOSSA CLI and upload the results, the most accurate and secure way to integrate.
+- [CI/CD Scanning](https://docs.fossa.com/docs/project-setup/cicd-scanning.md): Provide dependency data from your existing CI/CD environment for faster, more accurate FOSSA scans.
+- [Pull Request Checks](https://docs.fossa.com/docs/project-setup/pr-checks.md): Block PRs that introduce new license compliance or security violations using FOSSA GitHub status checks.
+- [Badge Pull Requests](https://docs.fossa.com/docs/project-setup/badge-pull-requests.md): Automatically add a FOSSA license-scan status badge to your GitHub README when you import a project.
+- [Containers](https://docs.fossa.com/docs/project-setup/containers.md): Scan Docker and OCI container images for open source license and vulnerability issues.
+- [Snippets](https://docs.fossa.com/docs/project-setup/snippets.md): Find open source code copied into your codebase without being declared as a dependency.
+- [Quick Import](https://docs.fossa.com/docs/project-setup/quick-import.md): Connect GitHub, GitLab, Bitbucket, or Azure Repos and scan hundreds of repositories in one click.
+- [Broker](https://docs.fossa.com/docs/project-setup/broker.md): Import internal and firewalled projects into FOSSA with Broker, without sharing source-code access.
+- [Binaries](https://docs.fossa.com/docs/project-setup/binaries.md): Decompose pre-compiled binaries and archives to identify open source components without source-code access.
+- [SBOM Import](https://docs.fossa.com/docs/project-setup/sbom-import.md): Import a CycloneDX or SPDX SBOM to run license and security compliance checks against its listed components.
+- [Dependencies](https://docs.fossa.com/docs/project-setup/dependencies.md): Inspect every dependency FOSSA detected, metadata, license status, filter options, custom licenses, and notice files.
+- [Package Inventory](https://docs.fossa.com/docs/project-setup/package-inventory.md): Search, filter, and manage every package detected across all of your organization's projects from one place.
+- [Project Settings](https://docs.fossa.com/docs/project-setup/project-settings.md): Configure the title, branches, ignored dependencies, labels, VCS host, and visibility for an individual FOSSA project.
+- [Ignore a Dependency](https://docs.fossa.com/docs/project-setup/ignore-a-dependency.md): Exclude a specific package from your project's issue tracking and reporting.
+- [Project Labels](https://docs.fossa.com/docs/project-setup/project-labels.md): Create and apply labels to organize projects and filter the dashboard by business context.
+- [Automatic Updates](https://docs.fossa.com/docs/project-setup/automatic-updates.md): Keep FOSSA projects continuously scanned, re-analyze on every new revision and surface new license and security issues automatically.
+- [Archive Upload](https://docs.fossa.com/docs/project-setup/archive-upload.md): How to upload an archive directly to FOSSA and how it's analyzed, for code that isn't pulled from a package registry.
+- [Supported Languages](https://docs.fossa.com/docs/project-setup/supported-languages.md)
+- [Python](https://docs.fossa.com/docs/project-setup/supported-languages/python.md)
+- [Setuptools (requirements.txt/setup.py)](https://docs.fossa.com/docs/project-setup/supported-languages/python/setuptools.md): requirements.txt, alongside setup.py, is the most common -yet imprecise -- approach to dependency management in python projects.
+- [Quick reference: setuptools](https://docs.fossa.com/docs/project-setup/supported-languages/python/setuptools-qr.md): Ideal
+- [Poetry](https://docs.fossa.com/docs/project-setup/supported-languages/python/poetry.md): Poetry is a tool for dependency management and packaging in Python.
+- [Pipenv/Pipfile](https://docs.fossa.com/docs/project-setup/supported-languages/python/pipenv.md): This is a modern approach to defining python project dependencies, providing very precise, complete dependency graphs for a python project.
+- [Quick reference: pipenv](https://docs.fossa.com/docs/project-setup/supported-languages/python/pipenv-qr.md): Ideal
+- [Conda Analysis](https://docs.fossa.com/docs/project-setup/supported-languages/python/conda.md): While originally created for Python programs, Conda can package and distribute software for any language. It provides a full list of all dependencies install…
+- [PDM](https://docs.fossa.com/docs/project-setup/supported-languages/python/pdm.md): PDM is a tool for dependency management and packaging in Python.
+- [uv](https://docs.fossa.com/docs/project-setup/supported-languages/python/uv.md): uv is a package and project manager for Python.
+- [JavaScript](https://docs.fossa.com/docs/project-setup/supported-languages/nodejs.md)
+- [Quick reference: npm](https://docs.fossa.com/docs/project-setup/supported-languages/nodejs/npm.md): A package.json file is required to be present all types of npm analysis.
+- [Yarn](https://docs.fossa.com/docs/project-setup/supported-languages/nodejs/yarn.md): Yarn is a spiritual successor to the npm cli. Yarn automatically updates the yarn.lock file when the yarn CLI is used to modify the dependencies present in t…
+- [Pnpm](https://docs.fossa.com/docs/project-setup/supported-languages/nodejs/pnpm.md): Pnpm is a fast, disk space-efficient package manager. Unlike npm and yarn, pnpm uses symbolic links to create a nested structure of dependencies.
+- [package.json](https://docs.fossa.com/docs/project-setup/supported-languages/nodejs/packagejson.md): package.json is a common build manifest used by both yarn and npmcli.
+- [Npm Lockfile](https://docs.fossa.com/docs/project-setup/supported-languages/nodejs/npm-lockfile.md): The package-lock.json file is generated when npm modifies node_modules or package.json and describes the exact dependency tree generated. One example of this…
+- [Quick reference: yarn](https://docs.fossa.com/docs/project-setup/supported-languages/nodejs/yarn-qr.md): Ideal/Minimum
+- [Go](https://docs.fossa.com/docs/project-setup/supported-languages/golang.md)
+- [Go Modules](https://docs.fossa.com/docs/project-setup/supported-languages/golang/gomodules.md): Go 1.11 has first-class support for "modules", which is now the preferred way to do dependency management.
+- [Dep](https://docs.fossa.com/docs/project-setup/supported-languages/golang/godep.md): Dep is an alternative toolchain for golang dependency management. Though go modules are the blessed form of dependency management, dep is exploring alternati…
+- [Glide](https://docs.fossa.com/docs/project-setup/supported-languages/golang/glide.md): Glide is very commonly encountered as a buildtool for older Go projects. Though deprecated, it's prevalent enough among existing projects that it warrants su…
+- [Quick reference: gomodules](https://docs.fossa.com/docs/project-setup/supported-languages/golang/gomodules-qr.md): Ideal
+- [Quick reference: godep](https://docs.fossa.com/docs/project-setup/supported-languages/golang/godep-qr.md): Ideal
+- [Quick reference: glide](https://docs.fossa.com/docs/project-setup/supported-languages/golang/glide-qr.md): Ideal/Minimum
+- [What is the new package-based Go modules analysis strategy?](https://docs.fossa.com/docs/project-setup/supported-languages/golang/v3-go-resolver-transition-qa.md): The V3 Go resolver is a new dynamic strategy to find dependences in go modules projects. It was first released in v3.8.5 on 2023-06-10.
+- [Maven](https://docs.fossa.com/docs/project-setup/supported-languages/maven.md)
+- [Maven plugin](https://docs.fossa.com/docs/project-setup/supported-languages/maven/mavenplugin.md): Maven projects are notoriously difficult to resolve into final dependency graphs. While many dependencies are declared as XML, these dependency declarations …
+- [Maven - Tree Command](https://docs.fossa.com/docs/project-setup/supported-languages/maven/treecmd.md): This maven tactic uses native, mvn dependency:tree command to retrieve dependency information.
+- [Maven pom.xml](https://docs.fossa.com/docs/project-setup/supported-languages/maven/pomxml.md): Maven projects use pom.xml files to declare dependencies and multi-project relationships.
+- [Quick reference: maven](https://docs.fossa.com/docs/project-setup/supported-languages/maven/maven-qr.md): Ideal
+- [Gradle](https://docs.fossa.com/docs/project-setup/supported-languages/gradle.md)
+- [Gradle build plugin](https://docs.fossa.com/docs/project-setup/supported-languages/gradle/plugin.md): How FOSSA's Gradle plugin tactic resolves dependencies via a Gradle init script, plus debugging steps.
+- [Scala](https://docs.fossa.com/docs/project-setup/supported-languages/scala.md)
+- [sbt Analysis](https://docs.fossa.com/docs/project-setup/supported-languages/scala/sbt.md): While the other analysis strategies for gradle and maven offer some scala project coverage, scala projects overwhelmingly use the build tool sbt.
+- [Quick reference: sbt](https://docs.fossa.com/docs/project-setup/supported-languages/scala/sbt-qr.md): Ideal/Minimum
+- [Ruby](https://docs.fossa.com/docs/project-setup/supported-languages/ruby.md)
+- [Quick reference: bundler](https://docs.fossa.com/docs/project-setup/supported-languages/ruby/bundler.md): Ideal
+- [PHP](https://docs.fossa.com/docs/project-setup/supported-languages/php.md)
+- [Composer Analysis](https://docs.fossa.com/docs/project-setup/supported-languages/php/composer.md): When developing in PHP, composer is commonly used to manage dependencies.
+- [.NET (C#, F#, VB)](https://docs.fossa.com/docs/project-setup/supported-languages/dotnet.md)
+- [NuGet Analysis](https://docs.fossa.com/docs/project-setup/supported-languages/dotnet/nuget.md): NuGet analysis follows these strategies in sequence: 1. project.assets.json 2. PackageReference
+- [nuspec](https://docs.fossa.com/docs/project-setup/supported-languages/dotnet/nuspec.md): A .nuspec file is an XML manifest that contains package metadata for Nuget packages. This manifest is used both to build the package and to provide informati…
+- [PackageReference](https://docs.fossa.com/docs/project-setup/supported-languages/dotnet/packagereference.md): Package references, using the PackageReference node, manage NuGet dependencies directly within project files (as opposed to a separate packages.config file)
+- [packages.config](https://docs.fossa.com/docs/project-setup/supported-languages/dotnet/packagesconfig.md): The packages.config XML file is used in some project types to maintain the list of packages referenced by the project.
+- [project.json](https://docs.fossa.com/docs/project-setup/supported-languages/dotnet/projectjson.md): The project.json file maintains a list of packages used in a project, known as a package management format. It supersedes packages.config but is in turn supe…
+- [project.assets.json](https://docs.fossa.com/docs/project-setup/supported-languages/dotnet/projectassetsjson.md): The project.assets.json file is used in .NET Core projects to manage dependencies and other resources
+- [Paket](https://docs.fossa.com/docs/project-setup/supported-languages/dotnet/paket.md): Paket is a dependency manager for .NET projects. Paket enables precise and predictable control over your dependencies
+- [Quick reference: Paket](https://docs.fossa.com/docs/project-setup/supported-languages/dotnet/paket-qr.md): Ideal/Minimum
+- [Rust](https://docs.fossa.com/docs/project-setup/supported-languages/rust.md)
+- [Quick reference: cargo](https://docs.fossa.com/docs/project-setup/supported-languages/rust/cargo.md): Ideal/Minimum
+- [Dart](https://docs.fossa.com/docs/project-setup/supported-languages/dart.md)
+- [Quick reference: pub](https://docs.fossa.com/docs/project-setup/supported-languages/dart/pub.md): Ideal/Minimum dart installed locally pubspec.yaml file present in your project pubspec.lock file present in your project, with dependencies already retrieved…
+- [iOS (Objective-C, Swift)](https://docs.fossa.com/docs/project-setup/supported-languages/ios.md)
+- [Cocoapods Analysis](https://docs.fossa.com/docs/project-setup/supported-languages/ios/cocoapods.md): podfile: Find all directories containing a Podfile file.
+- [Quick reference: cocoapods](https://docs.fossa.com/docs/project-setup/supported-languages/ios/cocoapods-qr.md): Ideal
+- [Carthage Analysis](https://docs.fossa.com/docs/project-setup/supported-languages/ios/carthage.md): Find any folder which contains a file named Cartfile.resolved.  Skip all subdirectories if one is found.
+- [Quick reference: carthage](https://docs.fossa.com/docs/project-setup/supported-languages/ios/carthage-qr.md): Ideal/Minimum Cartfile.resolved file present in your project
+- [Swift Package Manager](https://docs.fossa.com/docs/project-setup/supported-languages/ios/swift.md): Find all files named: Package.swift or find Xcode's project file named: project.pbxproj. We will not scan .build directory if the Package.swift or Xcode proj…
+- [C/C++](https://docs.fossa.com/docs/project-setup/supported-languages/c-cpp.md)
+- [Haskell](https://docs.fossa.com/docs/project-setup/supported-languages/haskell.md)
+- [Cabal](https://docs.fossa.com/docs/project-setup/supported-languages/haskell/cabal.md): Find all directories with a cabal.project file or a file with a .cabal extension.  When one is found, skip all subdirectories.
+- [Quick reference: cabal](https://docs.fossa.com/docs/project-setup/supported-languages/haskell/cabal-qr.md): Ideal/Minimum
+- [Stack](https://docs.fossa.com/docs/project-setup/supported-languages/haskell/stack.md): Find all directories with a stack.yaml file.  When one is found, skip all subdirectories.
+- [Quick reference: stack](https://docs.fossa.com/docs/project-setup/supported-languages/haskell/stack-qr.md): Ideal/Minimum stack buildtool install stack.yaml file present in your project
+- [Elixir](https://docs.fossa.com/docs/project-setup/supported-languages/elixir.md)
+- [Quick reference: mix](https://docs.fossa.com/docs/project-setup/supported-languages/elixir/mix.md): Ideal/Minimum mix installed locally mix.exs and mix.lock file present in your project
+- [Erlang](https://docs.fossa.com/docs/project-setup/supported-languages/erlang.md)
+- [Quick reference: rebar3](https://docs.fossa.com/docs/project-setup/supported-languages/erlang/rebar3.md): Ideal/Minimum rebar3 installed locally rebar.config file present in your project
+- [Clojure](https://docs.fossa.com/docs/project-setup/supported-languages/clojure.md)
+- [Quick reference: leiningen](https://docs.fossa.com/docs/project-setup/supported-languages/clojure/leiningen.md): Ideal/Minimum
+- [Perl](https://docs.fossa.com/docs/project-setup/supported-languages/perl.md)
+- [Fortran](https://docs.fossa.com/docs/project-setup/supported-languages/fortran.md)
+- [Nim](https://docs.fossa.com/docs/project-setup/supported-languages/nim.md)
+- [Nimble Analysis](https://docs.fossa.com/docs/project-setup/supported-languages/nim/nimble.md): When developing in nim, nimble is used to manage dependencies.
+- [R](https://docs.fossa.com/docs/project-setup/supported-languages/r.md)
+- [R Analysis (renv)](https://docs.fossa.com/docs/project-setup/supported-languages/r/renv.md): Currently, we only support analysis of r project which are using renv package manager.
+- [System](https://docs.fossa.com/docs/project-setup/supported-languages/system.md)
+- [apk](https://docs.fossa.com/docs/project-setup/supported-languages/system/apk.md)
+- [dpkg](https://docs.fossa.com/docs/project-setup/supported-languages/system/dpkg.md)
+- [rpm](https://docs.fossa.com/docs/project-setup/supported-languages/system/rpm.md)
+- [Scan Frequency](https://docs.fossa.com/docs/project-setup/scan-frequency.md): Schedule recurring scans so FOSSA picks up newly disclosed vulnerabilities and license changes even when your code hasn't changed.
+- [Notifications](https://docs.fossa.com/docs/project-setup/notifications.md): Configure who gets notified and through which channels when FOSSA detects new issues in your projects.
+- [Issue Scanners](https://docs.fossa.com/docs/project-setup/issue-scanners.md): Configure which issue scanners are enabled for your projects and how they gate CI/CD builds.
+- [Privacy Settings](https://docs.fossa.com/docs/project-setup/privacy-settings.md): Control whether a FOSSA project is publicly accessible to anyone with the link or restricted to authenticated members.
+- [Build History and Rebuilding](https://docs.fossa.com/docs/project-setup/build-history.md): View past scans for a project and trigger a rebuild or policy scan from the UI.
+- [Mediated Dependencies](https://docs.fossa.com/docs/project-setup/mediated-dependencies.md): How FOSSA handles transitive dependencies whose version is resolved by the package manager when multiple constraints conflict.
+
+## Release Groups
+
+- [Release Groups](https://docs.fossa.com/docs/release-groups.md): Bundle related projects into a single unit for shared reporting, policy enforcement, and release tracking.
+- [Creating a Release Group](https://docs.fossa.com/docs/release-groups/creating.md): Create a release group, add projects, and configure your first release.
+- [Managing Releases](https://docs.fossa.com/docs/release-groups/releases.md): Clone, edit, and manage releases within a release group to track compliance at specific points in time.
+- [Issues](https://docs.fossa.com/docs/release-groups/issues.md): Review licensing, security, and quality issues aggregated across all projects in a release group.
+- [Inventory & Licenses](https://docs.fossa.com/docs/release-groups/inventory.md): Browse the unified dependency inventory and license breakdown across all projects in a release group.
+- [Reports](https://docs.fossa.com/docs/release-groups/reports.md): Generate licensing, vulnerability, SBOM, and remediation guidance reports across all projects in a release group.
+- [Release Group Settings](https://docs.fossa.com/docs/release-groups/settings.md): Configure policies, report defaults, and portal visibility for a release group.
+- [Permissions](https://docs.fossa.com/docs/release-groups/permissions.md): Understand the permission model for release groups; who can create, edit, scan, set policies, and generate reports.
+
+## Issues
+
+- [Issues](https://docs.fossa.com/docs/issues.md): Track, triage, and manage licensing, security, and quality issues across your projects.
+- [Global Issue Summary](https://docs.fossa.com/docs/issues/global-summary.md): Track licensing, security, and quality issue trends across your entire organization from a single dashboard.
+- [Issue Details](https://docs.fossa.com/docs/issues/issue-details.md): Understand what's shown when you open an issue, status, actions, type-specific information, affected projects, and comments.
+- [Ignoring Issues](https://docs.fossa.com/docs/issues/ignoring-issues.md): Choose the right scope when ignoring open source issues, starting narrow and broadening only as you understand how a package is used.
+- [Time-based Ignore Rules](https://docs.fossa.com/docs/issues/time-based-ignore-rules.md): Snooze an issue for a set time window. It reappears automatically when the rule expires.
+- [Comparing Issues Between Revisions](https://docs.fossa.com/docs/issues/comparing-issues.md): Use issue comparison to see which issues are new, remediated, or unchanged between two revisions of a project or release group.
+
+## Licenses
+
+- [Licenses](https://docs.fossa.com/docs/licenses.md): Detect open source licenses, understand obligations, generate attribution, and track your compliance posture.
+- [Understanding Licensing Issues](https://docs.fossa.com/docs/licenses/understanding-licensing-issues.md): What each licensing issue type means, what triggers it, and what action is required.
+- [Reviewing Licensing Issues](https://docs.fossa.com/docs/licenses/reviewing-licensing-issues.md): Filter, sort, and act on licensing issues, with bulk actions, auto-ignore rules, and the issue drawer explained.
+- [License Corrections](https://docs.fossa.com/docs/licenses/license-corrections.md): Add, change, or remove licenses on a dependency to correct FOSSA's detected data across your organization.
+- [License Disputes](https://docs.fossa.com/docs/licenses/license-disputes.md): Found a license FOSSA identified incorrectly? Report it directly from the issue with a license data dispute.
+- [License Conclusions](https://docs.fossa.com/docs/licenses/license-conclusions.md): Determine a single dominant license per dependency by combining declared and discovered license data.
+- [Custom License Scans](https://docs.fossa.com/docs/licenses/custom-license-scans.md): Define your own licenses so FOSSA detects and reports them like any other license, and governs them with the same policy rules.
+
+## Vulnerabilities
+
+- [Vulnerabilities](https://docs.fossa.com/docs/vulnerabilities.md): Find known vulnerabilities (CVEs), prioritize them, and drive remediation workflows.
+- [Reviewing Security Issues](https://docs.fossa.com/docs/vulnerabilities/reviewing-security-issues.md): Triage, filter, sort, and action security vulnerabilities across all your projects from the Security Issues page.
+- [Auto-Ignore Rules](https://docs.fossa.com/docs/vulnerabilities/auto-ignore-rules.md): Persist ignore decisions across package versions, projects, and release groups using auto-ignore rules.
+- [Custom Risk Scores](https://docs.fossa.com/docs/vulnerabilities/custom-risk-scores.md): Override the standard CVSS severity of a vulnerability with your organization's own context-aware risk score.
+- [Issue Exceptions (VEX)](https://docs.fossa.com/docs/vulnerabilities/issue-exceptions.md): Formally ignore vulnerability issues with VEX justifications to document why a vulnerability does not apply in your context.
+- [Container Scanning](https://docs.fossa.com/docs/vulnerabilities/container-scanning.md): Identify vulnerability and license issues in container images using the FOSSA CLI.
+- [Vulnerability Detection in Imported SBOMs](https://docs.fossa.com/docs/vulnerabilities/sbom-vulnerability-detection.md): How FOSSA matches vulnerabilities from CPE identifiers in imported SBOMs, and what the Unverified label means.
+- [Automated Malware Detection](https://docs.fossa.com/docs/vulnerabilities/automated-malware-detection.md): Detect dependencies identified as malicious by cross-referencing your packages against known malware reports, and gate them out of your builds.
+- [How FOSSA Sources Vulnerability Data](https://docs.fossa.com/docs/vulnerabilities/vulnerability-data-sources.md): FOSSA aggregates vulnerability data from a number of sources and runs it through a combined human and automated review pipeline before surfacing issues in your projects.
+- [Vulnerability Service API Token Provisioning](https://docs.fossa.com/docs/vulnerabilities/vulnerability-service-api-token-provisioning.md): Request and use API tokens for authenticating against FOSSA's vulnerability service endpoints.
+- [Vulnerability Snapshot Downloads](https://docs.fossa.com/docs/vulnerabilities/vulnerability-snapshot.md): Download FOSSA's full vulnerability dataset as a gzipped JSON export via a single authenticated API request.
+
+## Quality
+
+- [Quality](https://docs.fossa.com/docs/quality.md): Assess dependency health, quality scoring, and maintenance signals for the packages you depend on.
+- [Understanding Quality Issues](https://docs.fossa.com/docs/quality/understanding-quality-issues.md): What each quality issue type means, what triggers it, and what action it calls for.
+- [Reviewing Quality Issues](https://docs.fossa.com/docs/quality/reviewing-quality-issues.md): Filter, sort, and act on quality issues across your projects, bulk actions, the issue drawer, and ignore rules explained.
+- [Quality Scanning](https://docs.fossa.com/docs/quality/quality-scanning.md): How FOSSA's quality scanner evaluates your dependencies and raises quality issues.
+
+## SBOM
+
+- [SBOM](https://docs.fossa.com/docs/sbom.md): Generate, import, export, and manage software bills of materials.
+- [Importing SBOMs](https://docs.fossa.com/docs/sbom/importing-sboms.md): Import CycloneDX or SPDX SBOMs into FOSSA to run license and security compliance checks against their listed components.
+- [PURL Support](https://docs.fossa.com/docs/sbom/purl-support.md): Which Package URL types FOSSA supports for SBOM import and generation, and how PURLs map to FOSSA's internal locator format.
+- [Generating SBOMs](https://docs.fossa.com/docs/sbom/generating-sboms.md): Generate SPDX or CycloneDX SBOMs from any FOSSA project to satisfy EO 14028, VDR/VEX requirements, and customer BOM requests.
+- [Sharing SBOMs](https://docs.fossa.com/docs/sbom/sharing.md): Share SBOM data publicly via the SBOM Portal or directly with specific partner organizations.
+
+## Policies
+
+- [Policies](https://docs.fossa.com/docs/policies.md): Define rules once and enforce them automatically across licenses, vulnerabilities, and quality.
+- [Licensing Policies](https://docs.fossa.com/docs/policies/licensing-policies.md): Create, configure, and roll out licensing policies. Pick a builtin template, tune its approve/flag/deny rules, and apply it across your organization.
+- [Security Policies](https://docs.fossa.com/docs/policies/security-policy.md): Create and configure security policies that control which vulnerabilities FOSSA flags as issues across your projects.
+- [Quality Policies](https://docs.fossa.com/docs/policies/quality-policy.md): Create and configure quality policies that control which dependency-health and supply-chain-risk issues FOSSA flags across your projects.
+- [SBOM Policies](https://docs.fossa.com/docs/policies/sbom-policy.md): Define which fields and file formats are required in imported SBOMs to enforce compliance and data quality standards.
+
+## Reports
+
+- [Reports](https://docs.fossa.com/docs/reports.md): Generate, schedule, and export compliance and security reports from your FOSSA data.
+- [Licensing Reports](https://docs.fossa.com/docs/reports/licensing-report.md): Generate, customize, and publish licensing reports and bills of materials from FOSSA.
+- [Remediation Guidance](https://docs.fossa.com/docs/reports/remediation-guidance.md): A prioritized upgrade plan that fixes the most vulnerabilities with the fewest code changes, organized into actionable categories.
+- [Global Reports](https://docs.fossa.com/docs/reports/global-reports.md): Generate org-wide license, audit, and issue reports across all projects from the Reports dashboard.
+- [Report Settings](https://docs.fossa.com/docs/reports/report-settings.md): Configure the logo, description, and saved filter options that appear across all reports for a project or release group.
+
+## FOSSA CLI
+
+- [FOSSA CLI](https://docs.fossa.com/docs/cli.md): Analyze dependencies, test policies, and generate reports from the command line.
+- [Concepts](https://docs.fossa.com/docs/cli/concepts.md)
+- [Analysis Strategies](https://docs.fossa.com/docs/cli/concepts/analysis-and-analyzers.md): The CLI performs dependency analysis using a set of "strategies".
+- [Features](https://docs.fossa.com/docs/cli/features.md)
+- [Regular Expression Syntax for Custom License and Keyword Searches](https://docs.fossa.com/docs/cli/features/custom-license-and-keyword-search-regular-expression-syntax.md): Custom License and Keyword Searches use version 1.9.5 of the Rust regular expression library, regex.
+- [Custom-License and Keyword Searches](https://docs.fossa.com/docs/cli/features/custom-license-and-keyword-searches.md): FOSSA offers the ability to search your codebase using regular expressions and to report matches. These matches can be reported in two different ways: Keywor…
+- [First-Party License Scans](https://docs.fossa.com/docs/cli/features/first-party-license-scans.md): First-party license scans allow you to find licenses in your project's code.
+- [Manually specifying dependencies](https://docs.fossa.com/docs/cli/features/manual-dependencies.md): FOSSA offers a way to manually upload dependencies provided we support the dependency type. Manually specifying dependencies is very helpful in the event you…
+- [Snippet Scanning](https://docs.fossa.com/docs/cli/features/snippet-scanning.md): Snippet scanning identifies potential open source code snippets within your first-party source code by comparing file fingerprints against FOSSA's knowledge …
+- [Strategy command selection](https://docs.fossa.com/docs/cli/features/strategy-command-selection.md): In some strategies, FOSSA CLI uses actual package managers or build tools in order to analyze the dependencies of a project. FOSSA refers to such strategies …
+- [Vendetta](https://docs.fossa.com/docs/cli/features/vendetta.md): Vendetta is the name of FOSSA's vendored dependency identification feature.
+- [License scanning local dependencies](https://docs.fossa.com/docs/cli/features/vendored-dependencies.md): FOSSA offers the ability to license scan your code directly. This is used primarily if a package manager is not yet supported or if you are vendoring depende…
+- [Walkthroughs](https://docs.fossa.com/docs/cli/walkthroughs.md)
+- [Analyze only a set of targets](https://docs.fossa.com/docs/cli/walkthroughs/analysis-target-configuration.md): Control which build targets the CLI discovers and how paths map to analyzers.
+- [Analyzing the Android Open Source Project](https://docs.fossa.com/docs/cli/walkthroughs/aosp.md): Integrate FOSSA with Android Open Source Project builds and custom Android distributions.
+- [Scanning Buildroot Projects](https://docs.fossa.com/docs/cli/walkthroughs/buildroot.md): Scan Buildroot-based embedded Linux projects for license and security compliance with FOSSA.
+- [Custom Integration with Conan Package Manager](https://docs.fossa.com/docs/cli/walkthroughs/conan.md): Set up FOSSA CLI analysis for C and C++ projects that use the Conan package manager.
+- [Integrating Container Scanning in CI](https://docs.fossa.com/docs/cli/walkthroughs/container-scanning-generic-ci.md): Run container image analysis and policy tests in a generic CI pipeline.
+- [Custom Integration using fossa-deps](https://docs.fossa.com/docs/cli/walkthroughs/custom-integrating-with-bower-example.md): Example of declaring custom or non-standard dependencies with fossa-deps for Bower.
+- [Installing Fossa CLI](https://docs.fossa.com/docs/cli/walkthroughs/installing-fossa-cli.md): Download and install the FOSSA CLI on macOS, Linux, and Windows.
+- [Quick Start](https://docs.fossa.com/docs/cli/walkthroughs/integrating.md): Configure your API key and run your first analyze and test cycle with minimal setup.
+- [Using FOSSA CLI with HTTP Proxies](https://docs.fossa.com/docs/cli/walkthroughs/proxy-configuration.md): Route CLI traffic through corporate HTTP proxies using standard environment variables.
+- [Custom SSL Certificate with fossa-cli](https://docs.fossa.com/docs/cli/walkthroughs/ssl-cert.md): Point the CLI at custom root certificate stores for TLS in locked-down networks.
+- [What Data Gets Uploaded to FOSSA's Servers](https://docs.fossa.com/docs/cli/walkthroughs/what-data-gets-uploaded.md): Types of data the CLI sends to FOSSA during analyze, including dependencies, vendored code, and telemetry.
+- [Scanning Yocto Projects](https://docs.fossa.com/docs/cli/walkthroughs/yocto.md): Analyze and report the runtime packages of a Yocto image build to FOSSA using the meta-fossa layer.
+- [References](https://docs.fossa.com/docs/cli/references.md)
+- [Debugging FOSSA CLI](https://docs.fossa.com/docs/cli/references/debugging.md)
+- [Experimental Features](https://docs.fossa.com/docs/cli/references/experimental.md)
+- [Path Dependency](https://docs.fossa.com/docs/cli/references/experimental/path-dependency.md): How FOSSA represents dependencies resolved from local filesystem paths instead of registries.
+- [Binary Discovery](https://docs.fossa.com/docs/cli/references/experimental/binary-discovery.md)
+- [Multi Stage Builds](https://docs.fossa.com/docs/cli/references/experimental/msb.md)
+- [Subcommands](https://docs.fossa.com/docs/cli/references/experimental/subcommands.md)
+- [fossa experimental-link-user-defined-dependency-binary](https://docs.fossa.com/docs/cli/references/experimental/subcommands/experimental-link-user-defined-dependency-binary.md): Link build artifacts to a FOSSA project for user-defined binary dependency tracking.
+- [Files](https://docs.fossa.com/docs/cli/references/files.md)
+- [fossa-deps](https://docs.fossa.com/docs/cli/references/files/fossa-deps.md): Declare manual, vendored, and custom dependencies in fossa-deps YAML or JSON.
+- [.fossa.yml](https://docs.fossa.com/docs/cli/references/files/fossa-yml.md): Configure analysis targets, paths, and CLI behavior with an optional .fossa.yml file.
+- [Subcommands](https://docs.fossa.com/docs/cli/references/subcommands.md)
+- [fossa analyze](https://docs.fossa.com/docs/cli/references/subcommands/analyze.md): Discover build targets, resolve dependency graphs, and upload analysis results to FOSSA.
+- [fossa container](https://docs.fossa.com/docs/cli/references/subcommands/container.md): Analyze and test container images for license and vulnerability policy violations.
+- [fossa init](https://docs.fossa.com/docs/cli/references/subcommands/init.md): Generate starter fossa-deps and .fossa.yml example files in the working directory.
+- [fossa list targets](https://docs.fossa.com/docs/cli/references/subcommands/list-targets.md): List analysis targets the CLI would run in a directory without uploading results.
+- [fossa project](https://docs.fossa.com/docs/cli/references/subcommands/project.md): Create, view, and manage FOSSA projects from the command line.
+- [fossa release-group](https://docs.fossa.com/docs/cli/references/subcommands/release-group.md): Manage FOSSA release groups and their member projects from the command line.
+- [fossa report](https://docs.fossa.com/docs/cli/references/subcommands/report.md): Download compliance or attribution reports for the latest project revision.
+- [fossa sbom](https://docs.fossa.com/docs/cli/references/subcommands/sbom.md): Upload SPDX or CycloneDX SBOMs to FOSSA and run policy tests against them.
+- [fossa test](https://docs.fossa.com/docs/cli/references/subcommands/test.md): Fail CI when the latest scan has license or security policy violations.
+- [Analyze](https://docs.fossa.com/docs/cli/references/subcommands/analyze.md)
+- [Fossa Analyze Additional Flag Options](https://docs.fossa.com/docs/cli/references/subcommands/analyze/cli-options.md): Optional flags that modify how fossa analyze discovers and uploads projects.
+- [Dynamic Linked Dependency Detection](https://docs.fossa.com/docs/cli/references/subcommands/analyze/detect-dynamic.md): Detect dynamically linked system libraries in C and C++ binaries during analyze.
+- [Vendored Source Identification](https://docs.fossa.com/docs/cli/references/subcommands/analyze/detect-vendored.md): Find vendored open source libraries copied beside first-party code during analyze.
+- [Container](https://docs.fossa.com/docs/cli/references/subcommands/container.md)
+- [Experimental Scanner - Podman](https://docs.fossa.com/docs/cli/references/subcommands/container/podman.md): Use Podman as the container engine when running fossa container analysis.
+- [FOSSA's container scanner](https://docs.fossa.com/docs/cli/references/subcommands/container/scanner.md): Supported image sources, package managers, and analysis options for container scanning.
+- [Project](https://docs.fossa.com/docs/cli/references/subcommands/project.md)
+- [fossa project edit](https://docs.fossa.com/docs/cli/references/subcommands/project/edit.md): Update FOSSA project settings such as title, URL, and default branch from the CLI.
+- [Release Group](https://docs.fossa.com/docs/cli/references/subcommands/release-group.md)
+- [fossa release-group add-projects](https://docs.fossa.com/docs/cli/references/subcommands/release-group/add-projects.md): Add existing FOSSA projects to a release group.
+- [fossa release-group create-release](https://docs.fossa.com/docs/cli/references/subcommands/release-group/create-release.md): Create a release snapshot inside a FOSSA release group.
+- [fossa release-group create](https://docs.fossa.com/docs/cli/references/subcommands/release-group/create.md): Create a new FOSSA release group.
+- [fossa release-group delete-release](https://docs.fossa.com/docs/cli/references/subcommands/release-group/delete-release.md): Delete a release snapshot from a FOSSA release group.
+- [fossa release-group delete](https://docs.fossa.com/docs/cli/references/subcommands/release-group/delete.md): Delete a FOSSA release group.
+- [FOSSA CLI Telemetry](https://docs.fossa.com/docs/cli/telemetry.md): What CLI telemetry collects, how it is sent, and how to inspect or disable it.
+- [Differences from FOSSA 1.x to 3.x](https://docs.fossa.com/docs/cli/differences-from-v1.md): Migration guide for FOSSA CLI 1.x users: what changed in 3.x, new features, and breaking changes.
+
+## API Reference
+
+- [API Reference](https://docs.fossa.com/docs/api.md): Build integrations and automate workflows with the FOSSA REST API.
+- [Introduction to the FOSSA API](https://docs.fossa.com/docs/api/introduction.md): Generate an API key and make your first request to the FOSSA REST API.
+- [Authentication](https://docs.fossa.com/docs/api/authentication.md): Authenticate to the FOSSA API using an API token in the Authorization header.
+- [Errors](https://docs.fossa.com/docs/api/errors.md): Interpret FOSSA API error responses, 4xx codes indicate client errors, 5xx codes indicate server-side issues.
+- [Webhook Notifications](https://docs.fossa.com/docs/api/webhook-notifications.md): Automatically re-analyze FOSSA projects on a schedule or via an inbound webhook trigger.
+- [CPE Lookup API](https://docs.fossa.com/docs/api/cpe-lookup.md): Query FOSSA's vulnerability database for security metadata and CVEs by CPE string, no project scan required.
+- [Usage examples](https://docs.fossa.com/docs/api/examples.md)
+- [Managing issues](https://docs.fossa.com/docs/api/examples/managing-issues.md): Query, filter, bulk-ignore, and manage auto-ignore rules across licensing, security, and quality issues.
+- [Managing users and teams](https://docs.fossa.com/docs/api/examples/managing-users-and-teams.md): Create users, manage team membership, and query team projects and release groups via the FOSSA API.
+- [Initiating a binary scan](https://docs.fossa.com/docs/api/examples/initiating-a-binary-scan.md): Upload a binary or archive and start a decomposition scan through the FOSSA API, then poll for completion.
+- [Generating reports](https://docs.fossa.com/docs/api/examples/generating-reports.md): Trigger org-wide reports via the API: audit/due diligence reports and global issue CSV exports.
+- [Creating Jira tickets](https://docs.fossa.com/docs/api/examples/creating-jira-tickets.md): Automatically create Jira tickets from FOSSA issues without using the UI.
+- [Downloading attribution reports](https://docs.fossa.com/docs/api/examples/downloading-attribution-reports.md): Download project attribution (licensing) reports in TXT, HTML, Markdown, PDF, or CSV.
+- [Modifying release groups](https://docs.fossa.com/docs/api/examples/modifying-release-groups.md): Add projects to a release group and update the projects within an existing release group via the API.
+- [Retrieving the latest revision](https://docs.fossa.com/docs/api/examples/retrieving-latest-revision.md): Retrieve the latest revision for each branch of a project via the API.
+- [Rotating access tokens](https://docs.fossa.com/docs/api/examples/rotating-access-tokens.md): Best practices for managing and rotating FOSSA access tokens securely.
+- [Endpoint Reference](https://docs.fossa.com/docs/api/reference): Browse all REST endpoints by category.
+
+## Integrations
+
+- [Integrations](https://docs.fossa.com/docs/integrations.md): Connect FOSSA to CI/CD, source hosts, Jira, Slack, and fossabot.
+- [Jira](https://docs.fossa.com/docs/integrations/jira.md): Connect FOSSA to Jira Cloud or Server to export issues as tickets and automatically resolve them when closed in Jira.
+- [Creating Jira Tickets](https://docs.fossa.com

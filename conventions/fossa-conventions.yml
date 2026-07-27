@@ -1,0 +1,47 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fossa.com/docs/api
+docs: https://docs.fossa.com/docs/api
+api_base_url: https://app.fossa.com/api
+transport: https-only
+authentication:
+  style: bearer-token
+  header: 'Authorization: Bearer YOUR_API_KEY'
+  ref: authentication/fossa-authentication.yml
+content_type: application/json
+error_envelope:
+  documented: true
+  scheme: http-status-classes
+  detail: >-
+    2xx success; 4xx indicate a client error (missing token, omitted required
+    parameter); 5xx indicate a FOSSA server error (retry, then contact support).
+  ref: errors/fossa-problem-types.yml
+  rfc9457: false
+identifiers:
+  locator:
+    description: >-
+      FOSSA addresses projects and packages with a "locator" string
+      (fetcher+package+revision). The locator is the primary handle for
+      projects, revisions, and webhook hooks.
+    library: https://github.com/fossas/locator-rs
+webhooks:
+  documented: true
+  style: inbound-trigger
+  url_pattern: https://app.fossa.com/hooks/webhook/{project-locator}
+  ref: asyncapi/fossa-webhooks.yml
+idempotency:
+  documented: false
+  note: No idempotency-key contract is published for the FOSSA REST API.
+pagination:
+  documented: false
+  note: No cross-cutting pagination contract is published; endpoint-specific.
+rate_limiting:
+  documented: false
+  note: No published rate-limit headers or 429 contract in the API error reference.
+versioning:
+  api:
+    documented: false
+    note: The REST API is not path- or header-versioned in the published docs.
+  cli:
+    scheme: semver
+    ref: changelog/fossa-changelog.yml

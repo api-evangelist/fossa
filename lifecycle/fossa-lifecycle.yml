@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+source: https://status.fossa.com
+status_page: https://status.fossa.com
+versioning:
+  api:
+    scheme: unversioned-published
+    docs: https://docs.fossa.com/docs/api
+    note: The REST API is not path- or header-versioned in the published documentation.
+  cli:
+    scheme: semver
+    current: v3.17.13
+    releases: https://github.com/fossas/fossa-cli/releases
+    migration_guide: https://docs.fossa.com/docs/cli/differences-from-v1.md
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No formal REST API deprecation / Sunset-header policy is published. The CLI
+    documents a 1.x -> 3.x migration guide for its own breaking changes.
+sla:
+  url: null
+  note: No public SLA / uptime target document found.
+support: https://support.fossa.com

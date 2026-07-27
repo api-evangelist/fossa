@@ -1,0 +1,45 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/fossas
+packages:
+- language: haskell
+  registry: github-releases
+  name: fossa-cli
+  url: https://github.com/fossas/fossa-cli
+  install: 'curl -H ''Cache-Control: no-cache'' https://raw.githubusercontent.com/fossas/fossa-cli/master/install-latest.sh | bash'
+  official: true
+  description: >-
+    Fast, portable and reliable dependency analysis for any codebase. Supports
+    license and vulnerability scanning for large monoliths; language-agnostic
+    and integrates with 20+ build systems. Distributed as a prebuilt binary via
+    the install script, GitHub Releases, and Homebrew.
+- language: rust
+  registry: crates.io
+  name: fossapi
+  url: https://github.com/fossas/fossapi
+  install: cargo add fossapi
+  official: true
+  description: Tooling / Rust library for interacting with the FOSSA APIs.
+- language: rust
+  registry: crates.io
+  name: locator
+  url: https://github.com/fossas/locator-rs
+  install: cargo add locator
+  official: true
+  description: The FOSSA "locator" identifier type as a Rust library.
+- language: rust
+  registry: github
+  name: lib-fingerprint
+  url: https://github.com/fossas/lib-fingerprint
+  install: cargo add fingerprint
+  official: true
+  description: Common fingerprinting library for dependency identification.
+- language: typescript
+  registry: github-actions
+  name: fossas/fossa-action
+  url: https://github.com/fossas/fossa-action
+  install: 'uses: fossas/fossa-action@main'
+  official: true
+  description: >-
+    GitHub Action to find license compliance and security issues in
+    applications with FOSSA.

@@ -1,0 +1,86 @@
+generated: '2026-07-19'
+method: derived
+source: https://docs.fossa.com/docs
+note: >-
+  Entity-relationship model derived from FOSSA's published documentation (no
+  OpenAPI schema was available to derive $ref graphs). Entities and relationships
+  reflect documented product concepts; field-level id-prefixes are not published
+  (FOSSA addresses projects/revisions/packages with "locator" strings).
+identifier:
+  primary: locator
+  description: fetcher+package+revision string addressing projects and packages.
+  library: https://github.com/fossas/locator-rs
+entities:
+- name: Organization
+  description: Top-level tenant; owns projects, users, teams, and policies.
+- name: Project
+  description: An imported codebase/repository FOSSA scans; addressed by locator.
+- name: Revision
+  description: A scanned point-in-time (branch/commit) of a project.
+- name: Dependency
+  description: An open source component (package) detected in a revision.
+- name: Issue
+  description: A licensing, security (vulnerability), or quality finding.
+- name: License
+  description: A detected open source license and its obligations.
+- name: Vulnerability
+  description: A security vulnerability (CVE) affecting a dependency.
+- name: ReleaseGroup
+  description: A bundle of projects tracked together for shared reporting/policy.
+- name: Release
+  description: A point-in-time snapshot of a release group.
+- name: Policy
+  description: Licensing / security / SBOM rules that determine which findings are issues.
+- name: Report
+  description: Generated attribution, audit, SBOM, or issue export.
+- name: SBOM
+  description: Imported/exported CycloneDX or SPDX bill of materials.
+- name: User
+  description: A member of the organization with permissions.
+- name: Team
+  description: A grouping of users with project/release-group access.
+relationships:
+- from: Organization
+  to: Project
+  type: has_many
+- from: Organization
+  to: User
+  type: has_many
+- from: Organization
+  to: Team
+  type: has_many
+- from: Organization
+  to: Policy
+  type: has_many
+- from: Project
+  to: Revision
+  type: has_many
+- from: Revision
+  to: Dependency
+  type: has_many
+- from: Dependency
+  to: License
+  type: has_many
+- from: Dependency
+  to: Vulnerability
+  type: has_many
+- from: Revision
+  to: Issue
+  type: has_many
+- from: Issue
+  to: Dependency
+  type: belongs_to
+  via: dependency
+- from: ReleaseGroup
+  to: Project
+  type: has_many
+- from: ReleaseGroup
+  to: Release
+  type: has_many
+- from: Report
+  to: Project
+  type: belongs_to
+  via: project
+- from: Team
+  to: User
+  type: has_many

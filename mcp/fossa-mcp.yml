@@ -2,12 +2,10 @@ generated: '2026-07-19'
 method: derived
 status: candidate
 source: https://docs.fossa.com/docs/api
-note: >-
-  No official hosted FOSSA MCP server was found. This is a CANDIDATE tool list
-  derived from the documented FOSSA REST API capability surface (docs.fossa.com
-  API examples + endpoint reference), not from a published OpenAPI spec. Each
-  tool maps to a documented API workflow; signatures require confirmation
-  against the live endpoint reference before implementation.
+note: No official hosted FOSSA MCP server was found. This is a CANDIDATE tool list derived from the documented
+  FOSSA REST API capability surface (docs.fossa.com API examples + endpoint reference), not from a published
+  OpenAPI spec. Each tool maps to a documented API workflow; signatures require confirmation against the
+  live endpoint reference before implementation.
 server:
   name: fossa
   transport: http
@@ -44,3 +42,9 @@ tools:
 - name: cpe_lookup
   description: Query the vulnerability database for security metadata and CVEs by CPE string.
   source: https://docs.fossa.com/docs/api/cpe-lookup
+deployment:
+  mode: none
+  verified: derived
+  tools: 10
+  checked: '2026-08-12'
+  source: catalog MCP census

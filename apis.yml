@@ -50,7 +50,7 @@ tags:
 - Company
 - Security
 - Software Supply Chain
-- Open-Source
+- Open Source
 - License Compliance
 - Vulnerability Management
 - SBOM
@@ -66,6 +66,7 @@ tags_raw:
 - SBOM
 - Software Composition Analysis
 - DevSecOps
+- Open-Source
 apis:
 - name: FOSSA REST API
   description: >-
